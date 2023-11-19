@@ -1,5 +1,5 @@
 import req from './req-wrapper'
-const URI_PREPENDER = `${process.env.VUE_APP_API_URL}/api/v1/posts`
+const URI_PREPENDER = `${process.env.VUE_APP_API_SERVER_URL}/api/v1/posts`
 const wrap = url => `${URI_PREPENDER}${url}`
 
 const POST_URI = {

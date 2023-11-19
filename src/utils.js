@@ -1,23 +1,13 @@
-const BACKEND_PORT =
-  process.env.VUE_APP_BACKEND_PORT === null
-    ? ''
-    : `:${process.env.VUE_APP_BACKEND_PORT}`
-const BACKEND_URL = `${location.protocol}//${location.hostname}${BACKEND_PORT}`
-
 const FRONTEND_PORT =
   process.env.VUE_APP_FRONTEND_PORT === null
-    ? ''
-    : `:${process.env.VUE_APP_FRONTEND_PORT}`
+    ? '3000'
+    : `${process.env.VUE_APP_FRONTEND_PORT}`
 
-const REDIRECT_URI = `${location.protocol}//${location.hostname}${FRONTEND_PORT}/oauth/redirect`
-
-// const BACKEND_PORT = ':8080'
-// const BACKEND_URL = `${location.protocol}//${location.hostname}${BACKEND_PORT}`
-// const FRONTEND_PORT = ':3000'
+const REDIRECT_URI = `http://localhost:${FRONTEND_PORT}/oauth/redirect`
 
 export default {
   getSocialLoginUrl(socialType) {
-    const s = `${BACKEND_URL}/oauth2/authorization/${socialType}?redirect_uri=${REDIRECT_URI}`
+    const s = `http://localhost:8080/oauth2/authorization/${socialType}?redirect_uri=${REDIRECT_URI}`
 
     console.log(s)
     return s
