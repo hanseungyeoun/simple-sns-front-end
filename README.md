@@ -1,84 +1,70 @@
-# 프로젝트 개요
+# Getting Started with Create React App
 
-- 간단한 Post 등록/수정/삭제, 댓글, 좋아요, SNS 간단 로그인 기능이 있는 간단한 SNS front-end 프로젝트
-- veu js 공부를 위해 만들던 clone 코딩하던 소스를 API 연동, jwt 로그인, Oath2 소셜 로그인, Pagination 개선, 포스트, 회원, 수정/삭제, Profile, 도커 빌드 기타 기능 개선 등등 기능을 완성
-  시킨 프로젝트
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## 기술 스택
+## Available Scripts
 
-- vue js
-- vuex
+In the project directory, you can run:
 
-### 시스템 구조
+### `npm start`
 
-![Untitled](./image/system.png)
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## 화면구성
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-1. 메인 화면
+### `npm test`
 
-   ![Untitled](./image/main.png)
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-2. 글 작성
+### `npm run build`
 
-   ![Untitled](./image/write.png)
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-3. 로그인
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-   ![Untitled](./image/login.png)
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-4. 검색
+### `npm run eject`
 
-   ![Untitled](./image/search.png)
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-## **프로젝트 실행 방법**
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-<aside>
-💡 Front-end 소스를 실행 전  Back-end repo 에서 미리 소스를 Clone 받아 서버를 실행 시켜 놓는다.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-</aside>
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-Back-end repo 주소
+## Learn More
 
-[https://github.com/hanseungyeoun/simple-sms-back-end](https://github.com/hanseungyeoun/simple-sms-back-end)
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-### env 파일 작성하기
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-Project 루트 폴더에 각 local, production에 env 파일를 (.env.local, env.production) 생성한다.
+### Code Splitting
 
-| environment             | description                                    |
-| ----------------------- | ---------------------------------------------- |
-| NODE_ENV                | node로 빌드시 local, 도커로 빌드 시 production |
-| VUE_APP_PROXY_SERVER    | 서버 url                                       |
-| VUE_APP_API_SERVER_PORT | 서버 포트                                      |
-| VUE_APP_FRONTEND_PORT   | node로 빌드시 3000, 도커로 빌드 시 80          |
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-예시)
+### Analyzing the Bundle Size
 
-```bash
-NODE_ENV = "local" #node로 빌드시 local, 도커로 빌드 시 production
-VUE_APP_PROXY_SERVER = [서버 url]
-VUE_APP_API_SERVER_URL = http://localhost:8080
-VUE_APP_API_SERVER_PORT = [서버 포트]
-VUE_APP_FRONTEND_PORT = 3000 #node로 빌드시 3000, 도커로 빌드 시 80
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Node 빌드 (env.local)
+### Making a Progressive Web App
 
-```bash
-	## Project setup
-	yarn install
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-	### Compiles and hot-reloads for development
-	yarn serve
+### Advanced Configuration
 
-	### Compiles and minifies for production
-	yarn build
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### 도커 빌드 (env.production)
+### Deployment
 
-```bash
-	docker build . -t simple-sms-fron-end
-	docker run -d -p 80:80 docker run -d -p 80:80 my-app
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

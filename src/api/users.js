@@ -1,47 +1,18 @@
-import req from './req-wrapper'
+import axios from './axios';
 
-const URI_PREPENDER = `${process.env.VUE_APP_API_SERVER_URL}/api/v1/users`
-const wrap = url => `${URI_PREPENDER}${url}`
+export const join = async (data) => await axios.post(
+  `http://localhost:8080/api/v1/users/join`,
+  data
+)
 
-const ACCOUNT_URI = {
-  JOIN: '/join',
-  LOGIN: '/login',
-  ME: '/me',
-  DETAILS: '/me/details',
-  UPDATE_USER: '',
+export const login = (data) => {
+  return axios.post(`http://localhost:8080/api/v1/users/login`, data);
 }
 
-export default {
-  join(body, success, fail) {
-    console.log('getUser')
+export const getUser = (data) => {
+  return axios.post(`http://localhost:8080/api/v1/users/me`, data);
+}
 
-    req.post(wrap(ACCOUNT_URI.JOIN), body, success, fail)
-  },
-
-  login(body, success, fail) {
-    console.log('getUser')
-
-    req.post(wrap(ACCOUNT_URI.LOGIN), body, success, fail)
-  },
-
-  getUser(userId, success) {
-    console.log('getUser')
-
-    req.get(wrap(`${ACCOUNT_URI.ME}`), {}, success)
-  },
-
-  getUserDetails(userId, success) {
-    console.log('getUserDetails')
-    req.get(wrap(`${ACCOUNT_URI.DETAILS}`), {}, success)
-  },
-
-  updateUsers(userId, body, success, fail, config) {
-    req.upload(
-      wrap(`${ACCOUNT_URI.UPDATE_USER}/${userId}`),
-      body,
-      success,
-      fail,
-      config,
-    )
-  },
+export const getUserDetails = (data) => {
+  return axios.get(`http://localhost:8080/api/v1/users/me/details`);
 }
