@@ -13,24 +13,6 @@
 
 ![Untitled](./image/system.png)
 
-## 화면구성
-
-1. 메인 화면
-
-   ![Untitled](./image/main.png)
-
-2. 글 작성
-
-   ![Untitled](./image/write.png)
-
-3. 로그인
-
-   ![Untitled](./image/login.png)
-
-4. 검색
-
-   ![Untitled](./image/search.png)
-
 ## **프로젝트 실행 방법**
 
 <aside>
